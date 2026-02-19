@@ -14,14 +14,18 @@ Welcome to `command_interpreter`, a powerful and versatile command interpreter p
 ## 🚀 Getting Started <a name="getting-started"></a>
 This package provides a simple interface for executing commands and scripts on the current operating system from within your Flutter desktop application. To get started, follow these steps:
 
-1. Add `command_interpreter` as a dependency in your `pubspec.yaml` file:
+1. Create a `packages` folder in the root folder of your flutter app then add the `command_interpreter` package folder to it.
+
+2. Add `command_interpreter` as a dependency in your `pubspec.yaml` file:
    ```
    dependencies:
      command_interpreter: ^0.1.0 # Replace with the latest version
+       path: packages/command_interpreter/
+    
    ```
-2. Import the package files into your Dart code:
+3. Import the package files into your code:
    ```dart
-   import 'package:command_interpreter/interpreter.dart';
+   import 'package:command_interpreter/command_interpreter.dart';
    import 'package:command_interpreter/models/command_data.dart';
    import 'package:command_interpreter/models/script_data.dart';
    ```
@@ -111,6 +115,8 @@ The `CommandInterpreter` class automatically injects platform-specific commands 
 
 Use the command interpreter manually anywhere in your dart code:
 ```dart
+  import 'package:command_interpreter/command_interpreter.dart';
+  import 'package:command_interpreter/models/command_data.dart';
 
   String command = "echo";
   List<String> args = ["Hello"];
