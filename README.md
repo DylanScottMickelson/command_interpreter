@@ -77,6 +77,7 @@ Use the `run()` method to execute multiple commands defined in a script using a 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:command_interpreter/models/script_data.dart';
+import 'package:command_interpreter/models/command_data.dart';
 
 void main() {
   runApp(MyApp());
@@ -87,7 +88,7 @@ class MyApp extends StatelessWidget {
 
   void runScript() async {
     List<CommandData> commands = [
-      CommandData(command: "ls"),
+      CommandData(command: "ls", args: []),
       CommandData(command: "echo", args: ["Hello"]),
     ];
     ScriptData scriptData = ScriptData(name: "script_name", commands: commands);
