@@ -88,7 +88,7 @@ class MyApp extends StatelessWidget {
 
   void runScript() async {
     List<CommandData> commands = [
-      CommandData(command: "ls", args: []),
+      CommandData(command: "ls", args: ["\\"]),
       CommandData(command: "echo", args: ["Hello"]),
     ];
     ScriptData scriptData = ScriptData(name: "script_name", commands: commands);
