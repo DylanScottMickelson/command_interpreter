@@ -44,6 +44,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   void runCommand() async {
     String command = "echo";
@@ -82,6 +83,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   void runScript() async {
     List<CommandData> commands = [
